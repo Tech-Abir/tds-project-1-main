@@ -154,6 +154,20 @@ def process_request(data):
     print(f"✅ Finished round {round_num} for {task_id}")
 
 
+@app.get("/", response_class=HTMLResponse)
+def root():
+    return """
+    <html>
+        <head>
+            <title>Welcome</title>
+        </head>
+        <body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
+            <h1>🚀 TDS Project Space is Running!</h1>
+            <p>Use the API endpoint <code>/api-endpoint</code> to send round payloads.</p>
+        </body>
+    </html>
+    """
+    
 # === Main endpoint ===
 @app.post("/api-endpoint")
 async def receive_request(request: Request, background_tasks: BackgroundTasks):
