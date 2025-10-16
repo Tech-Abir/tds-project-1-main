@@ -177,7 +177,7 @@ You are a professional web developer assistant.
     # -----------------------------
     # Optional: save generated files locally
     # -----------------------------
-    output_dir = Path("./generated_app")
+    output_dir = Path("/tmp/generated_app")
     output_dir.mkdir(exist_ok=True)
     with open(output_dir / "index.html", "w", encoding="utf-8") as f:
         f.write(code_part)
