@@ -32,7 +32,7 @@ $body = @{
 
 # Send request to API
 $response = Invoke-RestMethod `
-    -Uri "https://huggingface.co/spaces/abirsaha/tds-project-1-main/api-endpoint" `
+    -Uri "https://abirsaha-tds-project-1-main.hf.space/api-endpoint" `
     -Method POST `
     -Body $body `
     -ContentType "application/json"
